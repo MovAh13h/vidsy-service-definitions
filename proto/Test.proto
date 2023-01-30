@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package test;
+
+option go_package = "test/";
+
+message Test {
+	optional string test = 1;
+}
