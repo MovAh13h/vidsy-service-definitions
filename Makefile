@@ -5,7 +5,7 @@ GO_OUT = go
 .PHONY = all
 
 all: | $(OUT) $(GO_OUT)
-	protoc --cpp_out=$(OUT)/cpp --go_out=$(GO_OUT) --go-grpc_out=$(GO_OUT) $(SRC)/*.proto
+	protoc --proto_path=$(SRC) --cpp_out=$(OUT)/cpp --go_out=$(GO_OUT) --go-grpc_out=$(GO_OUT) $(SRC)/*.proto
 
 $(OUT):
 	mkdir -p $@
